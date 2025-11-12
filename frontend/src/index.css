@@ -119,6 +119,13 @@ h1 {
 
 h2 {
   font-size: 42px;
+  font-weight: 700;
+}
+
+h3{
+  font-family: "Satoshi";
+  font-size: 32px;
+  font-weight: 500;
 }
 
 p {
@@ -128,6 +135,11 @@ p {
 
 li {
   font-family: "Satoshi", sans-serif;
+}
+span{
+  font-family: "Satoshi", sans-serif;
+  font-size: 20px;
+  font-weight: 900;
 }
 
 .container {
