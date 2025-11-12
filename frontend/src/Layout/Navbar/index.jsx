@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import NavLogo from "../../assets/NavLogo.png";
+import NavLogo from "../../assets/Images/NavLogo.png";
 import Dropdown from "../../Components/DropDown";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -8,9 +8,11 @@ import "aos/dist/aos.css";
 
 
 const Navbar = () => {
-   useEffect(() => {
-    AOS.init({ duration: 500, 
-    easing: "ease-in-out",once: false, });
+  useEffect(() => {
+    AOS.init({
+      duration: 500,
+      easing: "ease-in-out", once: false,
+    });
   }, []);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -59,14 +61,11 @@ const Navbar = () => {
 
   return (
     <nav className="w-full mx-auto bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+      <div className="container mx-auto">
         <div className="flex justify-between items-center py-4">
-          {/* Logo */}
           <div className="flex items-center ">
             <img src={NavLogo} alt="Logo" className="h-9 w-auto" />
           </div>
-
-          {/* Desktop Menu */}
           <ul className="hidden md:flex items-center space-x-8">
             {menuItems.map((menu, index) => (
               <li key={index}>
@@ -74,8 +73,6 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-
-          {/* Desktop Contact Button */}
           <div className="hidden md:flex">
             <a
               href="#"
@@ -84,8 +81,6 @@ const Navbar = () => {
               Contact Us
             </a>
           </div>
-
-          {/* Mobile Toggle Button */}
           <div className="md:hidden">
             <button onClick={toggleMenu} className="text-gray-700 hover:text-black">
               {menuOpen ? (
@@ -97,17 +92,13 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-
-      {/* Mobile Menu */}
       <div
-        className={`md:hidden bg-white border-t border-gray-200 transition-all duration-300 overflow-hidden ${
-          menuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
-        }`}
+        className={`md:hidden bg-white border-t border-gray-200 transition-all duration-300 overflow-hidden ${menuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+          }`}
       >
         <ul className="flex flex-col space-y-2 px-6 py-4">
           {menuItems.map((menu, index) => (
             <li key={index} className="flex flex-col">
-              {/* Each dropdown works separately on mobile */}
               <Dropdown title={menu.title} items={menu.items} />
             </li>
           ))}
