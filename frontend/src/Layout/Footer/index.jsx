@@ -1,9 +1,74 @@
-import React from 'react'
+import React from 'react';
+import FooterLogo from "../../assets/Images/FooterLogo.png"
 
-const index = () => {
+const Footer = () => {
   return (
-    <div>footer</div>
-  )
-}
+    <footer className="bg-white  py-12 px-8">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8 md:gap-20">
+          {/* Logo */}
+          <div className="">
+            <div className="text-4xl font-bold text-gray-900 tracking-tight">
+              <img src={FooterLogo}/>
+            </div>
+          </div>
 
-export default index
+          {/* Columns */}
+          <div className="flex flex-col md:flex-row gap-12 md:gap-20 flex-1 mt-12">
+            {/* Navigation Column */}
+            <div className="space-y-4">
+              <h3 className="!text-sm font-semibold uppercase tracking-wider ">
+                Navigation
+              </h3>
+              <ul className="space-y-2 text-sm ">
+                <li><a href="#" className="hover:text-gray-900 transition-colors">Home</a></li>
+                <li><a href="#" className="hover:text-gray-900 transition-colors">Work</a></li>
+                <li><a href="#" className="hover:text-gray-900 transition-colors">About</a></li>
+                <li><a href="#" className="hover:text-gray-900 transition-colors">Services</a></li>
+                <li><a href="#" className="hover:text-gray-900 transition-colors">Articles</a></li>
+              </ul>
+            </div>
+
+            {/* Other Column */}
+            <div className="space-y-4">
+              <h3 className="!text-sm font-semibold uppercase tracking-wider  ">
+                Other
+              </h3>
+              <ul className="space-y-2 text-sm ">
+                <li><a href="#" className="hover:text-gray-900 transition-colors">FAQ</a></li>
+                <li><a href="#" className="hover:text-gray-900 transition-colors">Pricing</a></li>
+                <li><a href="#" className="hover:text-gray-900 transition-colors">Contact</a></li>
+                <li><a href="#" className="hover:text-gray-900 transition-colors">Team</a></li>
+              </ul>
+            </div>
+
+            {/* Follow Us Column */}
+            <div className="space-y-4">
+              <h3 className="!text-sm font-semibold uppercase tracking-wider  ">
+                Follow Us
+              </h3>
+              <ul className="space-y-2 text-sm ">
+                <li><a href="#" className="hover:text-gray-900 transition-colors">Instagram</a></li>
+                <li><a href="#" className="hover:text-gray-900 transition-colors">X</a></li>
+                <li><a href="#" className="hover:text-gray-900 transition-colors">Youtube</a></li>
+                <li><a href="#" className="hover:text-gray-900 transition-colors">Linkedin</a></li>
+                <li><a href="#" className="hover:text-gray-900 transition-colors">Facebook</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="pt-8 mt-8 border-t border-gray-200 flex flex-col md:flex-row md:items-center md:justify-between text-xs t">
+          <p>&copy; Copyright 2025, All Rights Reserved by BYM</p>
+          <div className="flex flex-wrap gap-4 mt-2 md:mt-0">
+            <a href="#" className="hover:text-gray-900 transition-colors">Terms & Conditions</a>
+            <a href="#" className="hover:text-gray-900 transition-colors">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
