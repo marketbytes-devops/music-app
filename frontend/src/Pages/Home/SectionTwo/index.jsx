@@ -1,6 +1,8 @@
 import Guitar from "../../../assets/Icons/Guitar";
 import imgone from "../../../assets/Images/Home/banner-flow-1.png"
 import CraftImg1 from "../../../assets/Images/Home/Craft-img-1.jpg"
+import CraftImg2 from "../../../assets/Images/Home/Craft-img-2.jpg"
+import CraftImg3 from "../../../assets/Images/Home/Craft-img-3.jpg"
 
 const index = () => {
   return (
@@ -13,7 +15,7 @@ const index = () => {
       {/* Image 1 */}
       <div className=" z-30">
         <img
-          src={imgone}
+          src={CraftImg2}
           alt="Guitarist"
           className="w-[280px] h-[340px] object-cover rounded-3xl transform -rotate-12"
         />
@@ -31,7 +33,7 @@ const index = () => {
       {/* Image 3 - more overlap */}
       <div className=" -ml-8 z-10">
         <img
-          src={imgone}
+          src={CraftImg3}
           alt="Instruments"
           className="w-[280px] h-[340px] object-cover rounded-3xl transform rotate-12"
         />
@@ -93,15 +95,16 @@ const index = () => {
 
     {/* RIGHT SECTION */}
     <div className="flex items-center justify-between gap-2">
-      {/* Text Block */}
-      <div className="flex flex-col text-right">
-        <span className="font-bold">AUDIENCE & EVENT PLANNERS</span>
-        <p className="text-[#555555] text-sm">
+      
+      <Guitar />
+      <div className="flex flex-col ">
+        <span className="font-bold">AUDIENCE&EVENT PLANNERS</span>
+        <p className="text-[#555555] text-sm text-left">
           Event planners and audiences, find the perfect artists and bands to make your event amazing!
         </p>
       </div>
-      {/* SVG */}
-      <Guitar />
+      
+      
     </div>
 
   </div>
