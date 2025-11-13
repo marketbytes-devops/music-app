@@ -14,10 +14,6 @@ const HomePage = () => {
       <div className="mt-24">
         <FormSection/>
       </div>
-      
-
-      
-      
     </div>
   )
 }
