@@ -1,13 +1,19 @@
+import SectionFour from "./SectionFour"
 import Section1 from "./SectionOne"
 import Section2 from "./SectionTwo"
-import SectionSix from "./SectionSix"
+import FormSection from "./FormSection"
 
 const HomePage = () => {
   return (
     <div>
       <Section1/>
       <Section2/>
-      <SectionSix/>
+      <div className="mt-12">
+        <SectionFour/>
+      </div>
+      <div className="mt-24">
+        <FormSection/>
+      </div>
     </div>
   )
 }
