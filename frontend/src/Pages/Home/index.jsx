@@ -2,17 +2,21 @@ import SectionFour from "./SectionFour"
 import Section1 from "./SectionOne"
 import Section2 from "./SectionTwo"
 import FormSection from "./FormSection"
+import SectionSix from "./SectionSix"
 
 const HomePage = () => {
   return (
     <div>
-      <Section1/>
-      <Section2/>
+      <Section1 />
+      <Section2 />
       <div className="mt-12">
-        <SectionFour/>
+        <SectionFour />
+      </div>
+      <div className="mt-12">
+        <SectionSix />
       </div>
       <div className="mt-24">
-        <FormSection/>
+        <FormSection />
       </div>
     </div>
   )

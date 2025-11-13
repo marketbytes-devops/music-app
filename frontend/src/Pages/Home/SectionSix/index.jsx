@@ -3,7 +3,7 @@ import { Play } from 'lucide-react';
 import testimonial2 from '../../../assets/Images/Home/Testimonial3.jpg';
 import testimonial3 from '../../../assets/Images/Home/Testimonaial2.jpg';
 
-const TestimonialsSection = () => {
+const SectionSix = () => {
   return (
     <div className="w-full bg-white py-16 px-4">
       {/* Our Testimonials Badge */}
@@ -101,4 +101,4 @@ const TestimonialsSection = () => {
   );
 };
 
-export default TestimonialsSection;
+export default SectionSix;
