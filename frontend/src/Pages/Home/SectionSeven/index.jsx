@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TrustedPartnersSection = () => {
+const SectionSeven = () => {
   // Partner logos data
   const partners = [
     { name: "Spotify", icon: "🎵" },
@@ -16,21 +16,21 @@ const TrustedPartnersSection = () => {
   return (
     <div className="w-full flex justify-center px-4 py-16">
       {/* Main Container */}
-      <div 
+      <div
         className="w-full max-w-[1347px] bg-[#F5F5F5] rounded-[24px] py-16 px-8 flex flex-col items-center"
         style={{ minHeight: '420px' }}
       >
-        
+
         {/* Together We Make Badge */}
-        <div 
+        <div
           className="bg-[#555555] rounded-[50px] px-6 py-3 flex items-center gap-3 mb-8"
           style={{ height: '48px' }}
         >
           {/* White Circle Dot */}
           <div className="w-5 h-5 bg-white rounded-full"></div>
-          
+
           {/* Text */}
-          <span 
+          <span
             className="text-white uppercase tracking-[0.06em] leading-none"
             style={{
               fontFamily: 'sans-serif',
@@ -44,7 +44,7 @@ const TrustedPartnersSection = () => {
         </div>
 
         {/* Main Heading */}
-        <h2 
+        <h2
           className="text-[#1B1B1A] uppercase tracking-[0.06em] leading-none mb-12 text-center"
           style={{
             fontFamily: 'sans-serif',
@@ -57,16 +57,16 @@ const TrustedPartnersSection = () => {
         </h2>
 
         {/* Partners Logo Container */}
-        <div 
+        <div
           className="w-full max-w-[1184px] flex flex-wrap justify-center items-center gap-8 opacity-50"
           style={{ minHeight: '120px' }}
         >
           {partners.map((partner, index) => (
-            <div 
+            <div
               key={index}
               className="flex flex-col items-center justify-center bg-white rounded-lg p-6 shadow-sm hover:opacity-100 transition-opacity duration-300 cursor-pointer"
-              style={{ 
-                width: '120px', 
+              style={{
+                width: '120px',
                 height: '100px'
               }}
             >
@@ -83,4 +83,4 @@ const TrustedPartnersSection = () => {
   );
 };
 
-export default TrustedPartnersSection;
+export default SectionSeven;

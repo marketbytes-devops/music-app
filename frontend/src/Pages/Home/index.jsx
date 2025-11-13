@@ -3,6 +3,7 @@ import Section1 from "./SectionOne"
 import Section2 from "./SectionTwo"
 import FormSection from "./FormSection"
 import SectionSix from "./SectionSix"
+import SectionSeven from "./SectionSeven"
 
 const HomePage = () => {
   return (
@@ -14,6 +15,9 @@ const HomePage = () => {
       </div>
       <div className="mt-12">
         <SectionSix />
+      </div>
+      <div className="mt-12">
+        <SectionSeven />
       </div>
       <div className="mt-24">
         <FormSection />
