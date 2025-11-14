@@ -15,12 +15,11 @@ const SectionFour = () => {
             WHAT WE DO FOR YOU
           </p>
         </div>
-        <h2 className="text-center font-bold">OUR SERVICES</h2>
+        <h2 className="text-center">OUR SERVICES</h2>
       </div>
 
       <div className="grid lg:grid-cols-2 md:gap-20 sm:gap-12 gap-8">
         <div className="flex flex-col sm:gap-16 gap-8">
-          {/* CARD 1 */}
           <div className="overflow-hidden flex flex-col items-center text-left ">
             <img
               src={ServiceImg1}
@@ -29,7 +28,7 @@ const SectionFour = () => {
             />
            <div className="py-2 flex  items-center mt-2">
               <div>
-                <span className="!font-bold text-[#1B1B1A]">SOLO SINGER</span>
+                <span className="text-[#1B1B1A]">SOLO SINGER</span>
                 <p className="text-[#555555] font-medium mt-2 ">
                   Our solo singers bring emotion and elegance to any event...
                 </p>
@@ -39,8 +38,6 @@ const SectionFour = () => {
               </div>
             </div>
           </div>
-
-          {/* CARD 2 */}
           <div className="overflow-hidden flex flex-col items-center text-left ">
             <img
               src={ServiceImg2}
@@ -49,7 +46,7 @@ const SectionFour = () => {
             />
             <div className="py-2 flex  items-center mt-2">
               <div>
-                <span className="!font-bold text-[#1B1B1A]">DJ</span>
+                <span className="text-[#1B1B1A]">DJ</span>
                 <p className="text-[#555555] font-medium mt-2  ">
                   Our DJs bring the party to life with the best mixes and smooth transitions.
                 </p>
@@ -62,7 +59,6 @@ const SectionFour = () => {
         </div>
 
         <div className="flex flex-col sm:gap-14 gap-8">
-          {/* CARD 3 */}
           <div className=" overflow-hidden flex flex-col items-center text-left ">
             <img
               src={ServiceImg3}
@@ -71,7 +67,7 @@ const SectionFour = () => {
             />
             <div className="py-2 flex  items-center mt-2">
               <div>
-                <span className="!font-bold text-[#1B1B1A]">VIOLIN BAND</span>
+                <span className="text-[#1B1B1A]">VIOLIN BAND</span>
                 <p className="text-[#555555] font-medium mt-2  ">
                  Our violin band creates a sophisticated atmosphere with beautiful classical and contemporary music.
                 </p>
@@ -81,8 +77,6 @@ const SectionFour = () => {
               </div>
             </div>
           </div>
-
-          {/* CARD 4 */}
           <div className="overflow-hidden flex flex-col items-center text-left ">
             <img
               src={ServiceImg4}
@@ -91,7 +85,7 @@ const SectionFour = () => {
             />
             <div className="py-2 flex  items-center mt-2">
               <div>
-                <span className="!font-bold text-[#1B1B1A]">GRACEFUL NOTES</span>
+                <span className="text-[#1B1B1A]">GRACEFUL NOTES</span>
                 <p className="text-[#555555] font-medium mt-2  ">
                   Let the enchanting sound of the flute elevate your event. Perfect for weddings, anniversaries,..
                 </p>

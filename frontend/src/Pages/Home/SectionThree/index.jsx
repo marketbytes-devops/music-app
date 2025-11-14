@@ -5,7 +5,7 @@ import event3 from '../../../assets/Images/Home/event3.jpg';
 import event4 from '../../../assets/Images/Home/event4.jpg';
 import event5 from '../../../assets/Images/Home/event5.jpg';
 
-export default function EventsSection() {
+export default function SectionThree() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [cursorX, setCursorX] = useState(0); // track mouse movement inside text
 

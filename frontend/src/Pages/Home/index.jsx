@@ -1,28 +1,36 @@
 import SectionFour from "./SectionFour"
-import Section1 from "./SectionOne"
-import Section2 from "./SectionTwo"
+import SectionOne from "./SectionOne"
+import SectionTwo from "./SectionTwo"
 import FormSection from "./FormSection"
 import SectionSix from "./SectionSix"
 import SectionSeven from "./SectionSeven"
+import SectionThree from "./SectionThree"
 
 const HomePage = () => {
   return (
-    <div>
-      <Section1 />
-      <Section2 />
-      <div className="mt-12">
+    <>
+      <header>
+        <SectionOne />
+      </header>
+      <section className="mt-12">
+        <SectionTwo />
+      </section>
+      <section className="mt-12">
+        <SectionThree />
+      </section>
+      <section className="mt-12">
         <SectionFour />
-      </div>
-      <div className="mt-12">
+      </section>
+      <section className="mt-12">
         <SectionSix />
-      </div>
-      <div className="mt-12">
+      </section>
+      <section className="mt-12">
         <SectionSeven />
-      </div>
-      <div className="mt-24">
+      </section>
+      <section className="mt-24">
         <FormSection />
-      </div>
-    </div>
+      </section>
+    </>
   )
 }
 
