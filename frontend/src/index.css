@@ -105,27 +105,65 @@
 }
 
 h1,
-h2 {
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Lemon Milk", sans-serif;
 }
-h3,h4,h5{
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+@media (min-width: 768px) {
+  h2 {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 1024px) {
+  h2 {
+    font-size: 42px;
+   
+  }
+}
+
+h4{
+  font-family: "Satoshi";
+}
+
+h3{
+  font-family: "Satoshi";
+  font-size: 32px;
+  font-weight: 500;
+}
+
+p {
   font-family: "Satoshi", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+@media (max-width: 640px) {
+  p {
+    font-size: 12px;
+  }
 }
 
 li {
   font-family: "Satoshi", sans-serif;
 }
-
-p{
-  font-size: 18px;
+span{
   font-family: "Satoshi", sans-serif;
+  font-size: 20px;
+  font-weight: 900;
 }
-@media (max-width: 640px) {
-  p {
-    font-size: 16px;
-  }
-}
-
 
 .container {
   
