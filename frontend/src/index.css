@@ -105,65 +105,27 @@
 }
 
 h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h2 {
   font-family: "Lemon Milk", sans-serif;
 }
-
-h1 {
-  font-size: 60px;
-}
-
-h2 {
-  font-size: 22px;
-}
-
-@media (min-width: 768px) {
-  h2 {
-    font-size: 28px;
-  }
-}
-
-@media (min-width: 1024px) {
-  h2 {
-    font-size: 42px;
-   
-  }
-}
-
-h4{
-  font-family: "Satoshi";
-}
-
-h3{
-  font-family: "Satoshi";
-  font-size: 32px;
-  font-weight: 500;
-}
-
-p {
+h3,h4,h5{
   font-family: "Satoshi", sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-}
-
-@media (max-width: 640px) {
-  p {
-    font-size: 12px;
-  }
 }
 
 li {
   font-family: "Satoshi", sans-serif;
 }
-span{
+
+p{
+  font-size: 18px;
   font-family: "Satoshi", sans-serif;
-  font-size: 20px;
-  font-weight: 900;
 }
+@media (max-width: 640px) {
+  p {
+    font-size: 16px;
+  }
+}
+
 
 .container {
   

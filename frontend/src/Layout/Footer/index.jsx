@@ -3,9 +3,9 @@ import FooterLogo from "../../assets/Images/FooterLogo.png"
 
 const Footer = () => {
   return (
-    <footer className="bg-white  py-12 px-8">
+    <footer className="bg-white  py-12 px-8 container">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8 md:gap-20">
+        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8 md:gap-32">
           {/* Logo */}
           <div className="">
             <div className="text-4xl font-bold text-gray-900 tracking-tight">

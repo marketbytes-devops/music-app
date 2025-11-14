@@ -5,6 +5,7 @@ import FormSection from "./FormSection"
 import SectionSix from "./SectionSix"
 import SectionSeven from "./SectionSeven"
 import SectionThree from "./SectionThree"
+import SectionFive from "./SectionFive"
 
 const HomePage = () => {
   return (
@@ -20,6 +21,9 @@ const HomePage = () => {
       </section>
       <section className="mt-12">
         <SectionFour />
+      </section>
+       <section className="mt-12">
+        <SectionFive />
       </section>
       <section className="mt-12">
         <SectionSix />
