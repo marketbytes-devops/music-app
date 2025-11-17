@@ -7,11 +7,11 @@ import { LuArrowUpRight, LuMoveUpRight } from "react-icons/lu";
 
 const SectionFour = () => {
   return (
-    <section className="container sm:py-12 py-10 bg-[#F5F5F5] sm:px-14 px-8 rounded-3xl">
-      <div className="p-10">
+    <section className="container sm:py-12 py-4 bg-[#F5F5F5] sm:px-14 px-8 rounded-3xl">
+      <div className="sm:p-10 p-5">
         <div className="flex items-center justify-center">
           <p className="flex items-center gap-3 font-medium text-[#000000]">
-            <div className="w-5 h-5 bg-black rounded-full"></div>
+            <div className="md:w-5 w-3 h-3 md:h-5 bg-black rounded-full"></div>
             WHAT WE DO FOR YOU
           </p>
         </div>
@@ -20,6 +20,7 @@ const SectionFour = () => {
 
       <div className="grid lg:grid-cols-2 md:gap-20 sm:gap-12 gap-8">
         <div className="flex flex-col sm:gap-16 gap-8">
+
           <div className="overflow-hidden flex flex-col items-center text-left ">
             <img
               src={ServiceImg1}
@@ -28,7 +29,7 @@ const SectionFour = () => {
             />
            <div className="py-2 flex  items-center mt-2">
               <div>
-                <span className="text-[#1B1B1A]">SOLO SINGER</span>
+                <h4 className="text-[#1B1B1A]">SOLO SINGER</h4>
                 <p className="text-[#555555] font-medium mt-2 ">
                   Our solo singers bring emotion and elegance to any event...
                 </p>
@@ -38,6 +39,7 @@ const SectionFour = () => {
               </div>
             </div>
           </div>
+
           <div className="overflow-hidden flex flex-col items-center text-left ">
             <img
               src={ServiceImg2}
@@ -46,7 +48,7 @@ const SectionFour = () => {
             />
             <div className="py-2 flex  items-center mt-2">
               <div>
-                <span className="text-[#1B1B1A]">DJ</span>
+                <h4 className="text-[#1B1B1A]">DJ</h4>
                 <p className="text-[#555555] font-medium mt-2  ">
                   Our DJs bring the party to life with the best mixes and smooth transitions.
                 </p>
@@ -67,8 +69,8 @@ const SectionFour = () => {
             />
             <div className="py-2 flex  items-center mt-2">
               <div>
-                <span className="text-[#1B1B1A]">VIOLIN BAND</span>
-                <p className="text-[#555555] font-medium mt-2  ">
+                <h4 className="text-[#1B1B1A]">VIOLIN BAND</h4>
+                <p className="text-[#555555] font-medium mt-2 line-clamp-3 ">
                  Our violin band creates a sophisticated atmosphere with beautiful classical and contemporary music.
                 </p>
               </div>
@@ -77,6 +79,7 @@ const SectionFour = () => {
               </div>
             </div>
           </div>
+
           <div className="overflow-hidden flex flex-col items-center text-left ">
             <img
               src={ServiceImg4}
@@ -85,7 +88,7 @@ const SectionFour = () => {
             />
             <div className="py-2 flex  items-center mt-2">
               <div>
-                <span className="text-[#1B1B1A]">GRACEFUL NOTES</span>
+                <h4 className="text-[#1B1B1A]">GRACEFUL NOTES</h4>
                 <p className="text-[#555555] font-medium mt-2  ">
                   Let the enchanting sound of the flute elevate your event. Perfect for weddings, anniversaries,..
                 </p>
@@ -96,10 +99,13 @@ const SectionFour = () => {
             </div>
           </div>
         </div>
+
       </div>
 
       <div className="text-center">
-        <button className="px-10 py-3 rounded-full border mt-8 hover:bg-[#990000] hover:border-0">View Full Services</button>
+        <button className="px-10 py-3 rounded-full border sm:mt-8 mt-4 hover:bg-[#990000] hover:border-0">
+          <p>View Full Services</p>
+        </button>
       </div>
     </section>
   );

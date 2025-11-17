@@ -13,25 +13,25 @@ const HomePage = () => {
       <header>
         <SectionOne />
       </header>
-      <section className="mt-12">
+      <section className="md:mt-12 mt-5">
         <SectionTwo />
       </section>
-      <section className="mt-12">
+      <section className="md:mt-12 mt-5">
         <SectionThree />
       </section>
-      <section className="mt-12">
+      <section className="md:mt-12 mt-5">
         <SectionFour />
       </section>
        <section className="mt-12">
         <SectionFive />
       </section>
-      <section className="mt-12">
+      <section className="md:mt-12 mt-5">
         <SectionSix />
       </section>
-      <section className="mt-12">
+      <section className="md:mt-12 mt-5">
         <SectionSeven />
       </section>
-      <section className="mt-24">
+      <section className="md:mt-12 mt-10">
         <FormSection />
       </section>
     </>

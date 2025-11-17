@@ -104,69 +104,125 @@
   font-display: swap;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+/* ---------------------------
+   BASE STYLES (Mobile-first)
+---------------------------- */
+
+h1, h2 {
   font-family: "Lemon Milk", sans-serif;
 }
 
+/* --- Headings --- */
+
 h1 {
-  font-size: 60px;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 h2 {
-  font-size: 22px;
+  font-size: 20px;
 }
 
-@media (min-width: 768px) {
-  h2 {
-    font-size: 28px;
-  }
+h3 {
+  font-family: "Satoshi", sans-serif;
+  font-size: 20px;
+  
 }
 
-@media (min-width: 1024px) {
-  h2 {
-    font-size: 42px;
-   
-  }
-}
-
-h4{
-  font-family: "Satoshi";
-}
-
-h3{
-  font-family: "Satoshi";
-  font-size: 32px;
-  font-weight: 500;
+h4 {
+  font-family: "Satoshi", sans-serif;
+  font-size: 20px;
 }
 
 p {
   font-family: "Satoshi", sans-serif;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 12px;
+  
 }
-
-@media (max-width: 640px) {
-  p {
-    font-size: 12px;
+h5{
+    font-size: 26px;
+    font-family: "Satoshi", sans-serif;
   }
-}
 
 li {
   font-family: "Satoshi", sans-serif;
-}
-span{
-  font-family: "Satoshi", sans-serif;
-  font-size: 20px;
-  font-weight: 900;
+  font-size: 14px;
 }
 
 .container {
-  
   max-width: 90%;
   margin: 0 auto;
+}
+
+/* ---------------------------
+   TABLET VIEW (≥ 640px)
+---------------------------- */
+@media (min-width: 640px) {
+
+  h1 {
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 28px;
+  }
+
+   h5 {
+    font-size: 20px;
+  }
+
+  p,
+  li {
+    font-size: 16px;
+  }
+}
+
+/* ---------------------------
+   LARGE TABLET / SMALL LAPTOP (≥ 768px)
+---------------------------- */
+@media (min-width: 768px) {
+
+  h2 {
+    font-size: 28px;
+  }
+
+  p,
+  li {
+    font-size: 17px;
+  }
+}
+
+/* ---------------------------
+   DESKTOP VIEW (≥ 1024px)
+---------------------------- */
+@media (min-width: 1024px) {
+
+  h1 {
+    font-size: 60px;
+  }
+
+  h2 {
+    font-size: 42px;
+  }
+
+  h3 {
+    font-size: 32px;
+  }
+
+  h4{
+    font-size: 20px;
+  }
+
+  h5 {
+    font-size: 26px;
+  }
+
+  p,
+  li {
+    font-size: 18px;
+  }
 }

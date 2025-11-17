@@ -5,7 +5,7 @@ import testimonial3 from '../../../assets/Images/Home/Testimonaial2.jpg';
 
 const SectionSix = () => {
   return (
-    <div className="w-full bg-white py-16 px-4">
+    <div className="w-full bg-white py-10 px-4">
       {/* Our Testimonials Badge */}
       <div className="flex justify-center mb-8">
         <div className="bg-[#F5F5F5] rounded-[50px] px-6 py-3 flex items-center gap-2">
@@ -20,13 +20,13 @@ const SectionSix = () => {
       </h2>
 
       {/* Main Container with 2 Sections */}
-      <div className="max-w-[1394px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-7">
+      <div className="max-w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-7">
         
         {/* Section 1 - Dr. Emily Carter (2 cards) */}
-        <div className="bg-[#F5F5F5] rounded-[24px] w-[679px] h-[521px] flex items-center justify-center">
-          <div className="grid grid-cols-2 -space-x-12 h-full w-full">
+        <div className="bg-[#F5F5F5] w-auto h-[521px] flex items-center justify-center">
+          <div className="grid grid-cols-2 h-full w-full">
           {/* Content Card 1 */}
-          <div className="flex items-center justify-center">
+          <div className="flex  items-center justify-center">
             <div className="bg-[#DEDEE0] rounded-[50px] w-[295px] h-[452px] p-8 flex flex-col justify-center">
               <h3 className="text-[#1C1A1A] text-3xl font-bold mb-4">
                 Dr. Emily Carter
@@ -60,8 +60,8 @@ const SectionSix = () => {
         </div>
 
         {/* Section 2 - Mark (2 cards) */}
-        <div className="bg-[#F5F5F5] rounded-[24px] w-[679px] h-[521px] flex items-center justify-center">
-          <div className="grid grid-cols-2 -space-x-12 gap-0 h-full w-full">
+        <div className="bg-[#F5F5F5]  w-auto h-[521px] flex items-center justify-center">
+          <div className="grid grid-cols-2 gap-0 h-full w-full">
           {/* Content Card 2 */}
           <div className="flex items-center justify-center">
             <div className="bg-[#DEDEE0] rounded-[50px] w-[295px] h-[452px] p-8 flex flex-col justify-center">

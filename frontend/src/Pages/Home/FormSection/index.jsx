@@ -1,4 +1,3 @@
-import React from "react";
 import ContactForm from "../../../Components/Form";
 import LetsTalk from "../../../assets/Images/Home/Let's talk.png"
 
@@ -11,17 +10,18 @@ const FormSection = () => {
   return (
     <section className="container mx-auto">
       
-       <div className="">
-        <div className="flex 
-                       bg-[#F5F5F5] rounded-full px-3 py-2 max-w-full sm:max-w-[35%] mx-auto">
-          <p className="flex items-center gap-3 font-medium text-[#000000]">
+       
+        <div className="flex gap-3 items-center justify-center lg:max-w-[35%] sm:max-w-[65%] max-w-full
+                       bg-[#F5F5F5] rounded-full px-3 py-2  mx-auto">
+         
             <div className="w-5 h-5 bg-black rounded-full"></div>
+             <p className=" form-sec font-medium text-[#000000] uppercase  leading-none">
             CONNECT WITH US, WE'RE HERE TO HELP
           </p>
         </div>
-        <h2 className="text-center font-bold">LET'S TALK</h2>
-      </div>
 
+        <h2 className="text-center uppercase font-bold">LET'S TALK</h2>
+      
       <div className="">
   
   <img src={LetsTalk} className="w-full h-auto -mt-3" alt="Lets Talk" />
@@ -32,7 +32,7 @@ const FormSection = () => {
       title="GET IN TOUCH"
       description="Reach out with inquiries about tickets, partnerships, or event details."
       fields={["name", "email", "phone", "subject", "message"]}
-      buttonText="Send Message"
+      buttonText="Send message"
       onSubmit={handleSubmit}
     />
   </div>
