@@ -6,69 +6,70 @@ import CraftImg3 from "../../../assets/Images/Home/Craft-img-3.jpg";
 import Artist1 from "../../../assets/Images/Home/Artist1.png";
 import Artist2 from "../../../assets/Images/Home/Artist2.png";
 import Artist3 from "../../../assets/Images/Home/Artist3.png";
+import Button from "../../../Components/Button";
+
 import { useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+const SectionTwo = () => {
 
-
-
-const index = () => {
+  const navigate = useNavigate();
 
   useEffect(() => {
-  gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger);
 
-  // LEFT image animation
-  gsap.fromTo(
-    ".img-left",
-    { scale: 0.8, y: 80, opacity: 0 },
-    {
-      scale: 1,
-      y: 0,
-      opacity: 1,
-      scrollTrigger: {
-        trigger: ".img-middle",
-        start: "top 80%",
-        end: "bottom 40%",
-        scrub: true,
-      },
-    }
-  );
+    // LEFT image animation
+    gsap.fromTo(
+      ".img-left",
+      { scale: 0.8, y: 80, opacity: 0 },
+      {
+        scale: 1.15,
+        y: 0,
+        opacity: 1,
+        scrollTrigger: {
+          trigger: ".img-middle",
+          start: "top 80%",
+          end: "bottom 40%",
+          scrub: true,
+        },
+      }
+    );
 
-  // RIGHT image animation
-  gsap.fromTo(
-    ".img-right",
-    { scale: 0.8, y: 80, opacity: 0 },
-    {
-      scale: 1,
-      y: 0,
-      opacity: 1,
-      scrollTrigger: {
-        trigger: ".img-middle",
-        start: "top 80%",
-        end: "bottom 40%",
-        scrub: true,
-      },
-    }
-  );
-}, []);
+    // RIGHT image animation
+    gsap.fromTo(
+      ".img-right",
+      { scale: 0.8, y: 80, opacity: 0 },
+      {
+        scale: 1.15,
+        y: 0,
+        opacity: 1,
+        scrollTrigger: {
+          trigger: ".img-middle",
+          start: "top 80%",
+          end: "bottom 40%",
+          scrub: true,
+        },
+      }
+    );
+  }, []);
 
-
- 
   return (
     <>
       <section className="container ">
         <div className="w-full flex flex-col lg:flex-row ">
-          
           {/* LEFT SECTION - IMAGES */}
-          <div className="lg:w-[55%] w-full flex flex-col md:items-start items-center">
-            <p className="flex items-center gap-3 font-medium text-[#000000] bg-[#F5F5F5]
-                         rounded-full px-4 py-2 mb-4 lg:mb-6">
+          <div className="lg:w-[55%] w-full flex flex-col lg:items-start items-center">
+            <p
+              className="flex items-center gap-3 font-medium text-[#000000] bg-[#F5F5F5]
+                         rounded-full px-4 py-2 mb-5 lg:mb-6"
+            >
               <div className="w-5 h-5 bg-black rounded-full"></div>
               WHO WE ARE
             </p>
-            
+
             <div className="flex relative">
               {/* Image 1 */}
               <div className="hidden sm:block z-30 img-left ">
@@ -113,13 +114,12 @@ const index = () => {
               celebration, a grand event, or simply searching for the perfect
               artist to bring your vision to life, we make it effortless.
             </p>
-            <button className="px-10 py-3 rounded-full border lg:mt-8 mt-4">
-              <p>Learn more about us</p>
-            </button>
+            <Button text="Learn more about us" className="mt-3" onClick={() => navigate("/")} />
+
           </div>
         </div>
 
-        <div className="md:mt-10 mt-4">
+        <div className="lg:mt-10 mt-2">
           <div className="w-full container  text-center font-medium text-[#1B1B1A]">
             <h3>
               With thousands of bands already on board, We connect artists with
@@ -129,79 +129,86 @@ const index = () => {
           </div>
         </div>
 
-<div className="md:mt-10 mt-4">
-  <div
-    className="
+        <div className="lg:mt-10 mt-4">
+          <div
+            className="
       container 
       grid grid-cols-1 
-      md:grid-cols-12 
+      lg:grid-cols-12 
       items-stretch
     "
-  >
-    {/* LEFT TEXT */}
-    <div className="md:col-span-4 flex flex-col text-center md:text-left">
-      <h4 className="font-bold">ARTISTS & BANDS</h4>
-      <p className="text-[#555555]">
-        Book top artists and bands for your next event — it's that
-        simple!
-      </p>
-      {/* Overlapping images below left text */}
-      <div className="flex -space-x-3 self-center md:self-auto mt-4">
-        <img
-          className="w-12 h-12 rounded-full object-cover z-10 relative"
-          src={Artist1}
-          alt="Artist 1"
-        />
+          >
+            {/* LEFT TEXT */}
+            <Link
+              to="/"
+              className="lg:col-span-4 flex flex-col text-center lg:text-left"
+            >
+              <h4 className="font-bold">ARTISTS & BANDS</h4>
+              <p className="text-[#555555]">
+                Book top artists and bands for your next event — it's that
+                simple!
+              </p>
+              {/* Overlapping images below left text */}
+              <div className="flex -space-x-3 self-center lg:self-auto mt-4">
+                <img
+                  className="w-12 h-12 rounded-full object-cover z-10 relative"
+                  src={Artist1}
+                  alt="Artist 1"
+                />
 
-        <img
-          className="w-12 h-12 rounded-full object-cover z-30 -ml-3 relative"
-          src={Artist2}
-          alt="Artist 2"
-        />
+                <img
+                  className="w-12 h-12 rounded-full object-cover z-30 -ml-3 relative"
+                  src={Artist2}
+                  alt="Artist 2"
+                />
 
-        <img
-          className="w-12 h-12 rounded-full object-cover z-30 -ml-3 relative"
-          src={Artist3}
-          alt="Artist 3"
-        />
+                <img
+                  className="w-12 h-12 rounded-full object-cover z-30 -ml-3 relative"
+                  src={Artist3}
+                  alt="Artist 3"
+                />
 
-        <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-xs font-bold text-gray-600 shadow-md z-40 -ml-3 relative border border-gray-200">
-          100+
+                <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-xs font-bold text-gray-600 shadow-md z-40 -ml-3 relative border border-gray-200">
+                  100+
+                </div>
+              </div>
+            </Link>
+
+            {/* LEFT ICON */}
+            <div className="lg:col-span-1  hidden  sm:flex justify-center items-start mt-2 lg:mt-0">
+              <Guitar />
+            </div>
+
+            {/* DIVIDER */}
+            <div className="lg:col-span-2 hidden sm:flex justify-center mt-5 h-full">
+              <span className="text-[#555555] font-normal">
+                ---------------
+              </span>
+            </div>
+
+            {/* RIGHT ICON */}
+            <div className="lg:col-span-1  hidden  sm:flex justify-center items-start">
+              <Band />
+            </div>
+
+            {/* RIGHT TEXT */}
+            <Link
+              to="/"
+              className="lg:col-span-4 flex flex-col text-center lg:text-left justify-between sm:mt-0 mt-4"
+            >
+              <div>
+                <h4 className="font-bold">AUDIENCE & EVENT PLANNERS</h4>
+                <p className="text-[#555555]">
+                  Event planners and audiences, find the perfect artists and
+                  bands to make your event amazing!
+                </p>
+              </div>
+            </Link>
+          </div>
         </div>
-      </div>
-    </div>
-
-    {/* LEFT ICON */}
-    <div className="md:col-span-1  hidden  sm:flex justify-center items-start">
-      <Guitar />
-    </div>
-
-    {/* DIVIDER */}
-    <div className="md:col-span-2 hidden sm:flex justify-center mt-5 h-full">
-      <span className="text-[#555555] font-normal">---------------</span>
-    </div>
-
-    {/* RIGHT ICON */}
-    <div className="md:col-span-1  hidden  sm:flex justify-center items-start">
-      <Band />
-    </div>
-
-    {/* RIGHT TEXT */}
-    <div className="md:col-span-4 flex flex-col text-center md:text-left justify-between sm:mt-0 mt-4">
-      <div>
-        <h4 className="font-bold">AUDIENCE & EVENT PLANNERS</h4>
-        <p className="text-[#555555]">
-          Event planners and audiences, find the perfect artists and bands
-          to make your event amazing!
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-        
       </section>
     </>
   );
 };
 
-export default index;
+export default SectionTwo;

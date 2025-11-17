@@ -163,9 +163,6 @@ li {
     font-size: 48px;
   }
 
-  h2 {
-    font-size: 24px;
-  }
 
   h3 {
     font-size: 28px;
@@ -177,7 +174,7 @@ li {
 
   p,
   li {
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 
@@ -186,11 +183,9 @@ li {
 ---------------------------- */
 @media (min-width: 768px) {
 
-  h2 {
-    font-size: 28px;
-  }
+  
 
-  p,
+  
   li {
     font-size: 17px;
   }

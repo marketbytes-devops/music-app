@@ -27,15 +27,15 @@ export default function SectionThree() {
   };
 
   return (
-    <section className="md:py-20 py-5 px-2 text-white">
+    <section className="lg:py-20 py-5 px-2 text-white">
       <div className="container mx-auto">
-        <div className="mx-auto bg-black rounded-3xl  p-0 sm:p-2 md:p-6 border
+        <div className="mx-auto bg-black rounded-3xl  p-0 sm:p-2 lg:p-6 border
                        border-gray-800 overflow-visible">
           <div className="grid md:grid-cols-2 md:gap-12 gap-3 items-start relative">
             
             {/* Left Side */}
-            <div className="space-y-3 md:space-y-1 ml-8">
-              <div className="flex items-center">
+            <div className="space-y-3 lg:space-y-1 items-center lg:ml-0 md:ml-5 ml-0">
+              <div className="flex items-center justify-center md:justify-normal">
                 <span className="inline-flex items-center gap-3  mt-8 md:mt-29 text-white
                            bg-[#4C4C4C] rounded-full pl-4 pr-6 py-2 
                            text-md font-medium tracking-wider">
@@ -44,13 +44,13 @@ export default function SectionThree() {
                 </span>
               </div>
 
-              <h2 className=" font-medium leading-tight">
+              <h2 className=" font-medium leading-tight md:text-left text-center">
                 EVENTS THAT SHINE,
                 <br />
                 MOMENTS THAT LAST
               </h2>
 
-              <p className=" text-white leading-relaxed max-w-md">
+              <p className=" text-white leading-relaxed max-w-md md:text-left text-center">
                 Bringing your celebrations to life with the <br /> perfect music and talent!
               </p>
             </div>
@@ -88,7 +88,7 @@ export default function SectionThree() {
 
                     {/* Text + Arrow */}
                     <div className="flex items-center justify-between">
-                      <span className="text-xl md:text-4xl  font-medium text-white group-hover:text-amber-500 transition-colors select-none">
+                      <span className="text-xl lg:text-4xl  font-medium text-white group-hover:text-amber-500 transition-colors select-none">
                         {event}
                       </span>
 
