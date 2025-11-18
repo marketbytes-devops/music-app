@@ -120,7 +120,7 @@ export default function HeroSection() {
             </h1>
 
             {/* Also slides up (slightly delayed for better effect) */}
-            <h2 className="font-black text-[#1B1B1A] text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-2 slide-up-animation"
+            <h2 className="font-black text-[#1B1B1A] mt-2 slide-up-animation"
                 style={{ animationDelay: '0.3s' }}>
               MAKE YOUR EVENT UNFORGETTABLE!
             </h2>
@@ -165,7 +165,7 @@ export default function HeroSection() {
         {/* Images hidden on mobile */}
         <div
           ref={imgContainerRef}
-          className="absolute inset-x-0 bottom-0 sm:bottom-4 md:bottom-32 lg:bottom-12 pointer-events-none z-10 hidden sm:block"
+          className="absolute inset-x-0 bottom-0 sm:bottom-4 md:-bottom-10 pointer-events-none z-10 hidden sm:block"
           style={{ transform: 'translateY(0px)' }}
         >
           <div className="relative flex justify-between items-end px-4 sm:px-6 md:px-12 lg:px-24">
@@ -173,7 +173,7 @@ export default function HeroSection() {
               <img
                 src={flowImgFirst}
                 alt="Musician"
-                className="w-40 h-48 sm:w-48 sm:h-56 md:w-34 md:h-45 lg:w-50 lg:h-62 object-cover rounded-3xl"
+                className="w-40 h-48 sm:w-48 sm:h-56  md:w-70 md:h-74 object-cover rounded-3xl"
               />
             </div>
 
@@ -181,7 +181,7 @@ export default function HeroSection() {
               <img
                 src={flowImgSecond}
                 alt="Live Performance"
-                className="w-40 h-48 sm:w-48 sm:h-56 md:w-34 md:h-45  lg:w-50 lg:h-62 object-cover rounded-3xl -rotate-6 sm:-rotate-12 parallax-img"
+                className="w-40 h-48 sm:w-48 sm:h-56   md:w-70 md:h-74 object-cover rounded-3xl -rotate-6 sm:-rotate-12 parallax-img"
                 style={{ position: 'relative', zIndex: -1 }}
               />
             </div>
