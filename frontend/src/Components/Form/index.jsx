@@ -70,9 +70,9 @@ const ContactForm = ({
 
   return (
     <div className="bg-[#F8F8F8] p-10 rounded-2xl">
-      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6">
-        <h4 className="text-[26px] font-bold text-black">{title}</h4>
-        <span className=" text-black !font-medium max-w-md mt-2 sm:mt-0 text-left">{description}</span>
+      <div className="flex flex-col sm:flex-row justify-between items-center mb-6">
+        <h5 className="text-[26px] font-bold text-black">{title}</h5>
+        <h4 className=" text-[#1C1A1A] font-medium max-w-md mt-2 sm:mt-0 md:text-right text-center">{description}</h4>
       </div>
 
       <form onSubmit={handleSubmit} className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
@@ -151,7 +151,7 @@ const ContactForm = ({
             type="submit"
             className="bg-gradient-to-r from-blue-400 to-purple-500 text-white px-6 py-3 rounded-full font-medium transition-all duration-300 hover:scale-105 hover:shadow-md"
           >
-            {buttonText}
+            <h4 className="font-medium">{buttonText}</h4>
           </button>
         </div>
       </form>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
-import { FaChevronDown } from "react-icons/fa";
+import DownArrow from "../../assets/Icons/Home/DownArrow"; 
+import UpArrow from "../../assets/Icons/Home/UpArrow"; 
 import { motion, AnimatePresence } from "framer-motion";
 
 const Dropdown = ({ title, items = [] }) => {
@@ -51,11 +52,12 @@ const Dropdown = ({ title, items = [] }) => {
         className="flex items-center justify-between text-gray-700 hover:text-black px-3 py-2 text-sm font-medium focus:outline-none w-full"
       >
         {title}
-        <FaChevronDown
-          className={`ml-1 w-3 h-3 transition-transform duration-200 ${
-            isOpen ? "rotate-180" : "rotate-0"
-          }`}
-        />
+        {/* Use your custom SVG components */}
+        {isOpen ? (
+          <UpArrow className="ml-1 w-3 h-3 transition-transform duration-200" />
+        ) : (
+          <DownArrow className="ml-1 w-3 h-3 transition-transform duration-200" />
+        )}
       </button>
 
       {/* Dropdown Menu with Framer Motion */}

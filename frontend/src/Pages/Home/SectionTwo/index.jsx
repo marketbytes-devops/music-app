@@ -1,37 +1,96 @@
-import Guitar from "../../../assets/Icons/Guitar";
-import imgone from "../../../assets/Images/Home/banner-flow-1.png"
-import CraftImg1 from "../../../assets/Images/Home/Craft-img-1.jpg"
-import CraftImg2 from "../../../assets/Images/Home/Craft-img-2.jpg"
-import CraftImg3 from "../../../assets/Images/Home/Craft-img-3.jpg"
+import Guitar from "../../../assets/Icons/Home/Guitar";
+import Band from "../../../assets/Icons/Home/Band";
+import CraftImg1 from "../../../assets/Images/Home/Craft-img-1.jpg";
+import CraftImg2 from "../../../assets/Images/Home/Craft-img-2.jpg";
+import CraftImg3 from "../../../assets/Images/Home/Craft-img-3.jpg";
+import Artist1 from "../../../assets/Images/Home/Artist1.png";
+import Artist2 from "../../../assets/Images/Home/Artist2.png";
+import Artist3 from "../../../assets/Images/Home/Artist3.png";
+import Button from "../../../Components/Button";
 
-const index = () => {
+import { useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+const SectionTwo = () => {
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // LEFT image animation
+    gsap.fromTo(
+      ".img-left",
+      { scale: 0.8, y: 80, opacity: 0 },
+      {
+        scale: 1.15,
+        y: 0,
+        opacity: 1,
+        scrollTrigger: {
+          trigger: ".img-middle",
+          start: "top 80%",
+          end: "bottom 40%",
+          scrub: true,
+        },
+      }
+    );
+
+    // RIGHT image animation
+    gsap.fromTo(
+      ".img-right",
+      { scale: 0.8, y: 80, opacity: 0 },
+      {
+        scale: 1.15,
+        y: 0,
+        opacity: 1,
+        scrollTrigger: {
+          trigger: ".img-middle",
+          start: "top 80%",
+          end: "bottom 40%",
+          scrub: true,
+        },
+      }
+    );
+  }, []);
+
   return (
     <>
-      <section className="container mt-20">
-        <div className="w-full flex">
+      <section className="container ">
+        <div className="w-full flex flex-col lg:flex-row ">
           {/* LEFT SECTION - IMAGES */}
-          <div className="w-[55%] flex items-center">
+          <div className="lg:w-[55%] w-full flex flex-col lg:items-start items-center">
+            <p
+              className="flex items-center gap-3 font-medium text-[#000000] bg-[#F5F5F5]
+                         rounded-full px-4 py-2 mb-5 lg:mb-6"
+            >
+              <div className="w-5 h-5 bg-black rounded-full"></div>
+              WHO WE ARE
+            </p>
+
             <div className="flex relative">
               {/* Image 1 */}
-              <div className=" z-30">
+              <div className="hidden sm:block z-30 img-left ">
                 <img
                   src={CraftImg2}
                   alt="Guitarist"
-                  className="w-[280px] h-[340px] object-cover rounded-3xl transform -rotate-12"
+                  className="sm:w-[280px] h-[340px] object-cover rounded-3xl transform -rotate-12"
                 />
               </div>
 
               {/* Image 2 - slightly overlapped */}
-              <div className="-ml-8 z-40">
+              <div className="ml-0 sm:-ml-8 z-40 img-middle">
                 <img
                   src={CraftImg1}
                   alt="Singer"
-                  className="w-[280px] h-[340px] object-cover rounded-3xl"
+                  className="sm:w-[280px] w-full sm:h-[340px] h-auto object-cover rounded-3xl"
                 />
               </div>
 
               {/* Image 3 - more overlap */}
-              <div className=" -ml-8 z-10">
+              <div className="hidden sm:block -ml-8 z-10 img-right">
                 <img
                   src={CraftImg3}
                   alt="Instruments"
@@ -42,27 +101,25 @@ const index = () => {
           </div>
 
           {/* RIGHT SECTION - TEXT */}
-          <div className="w-[45%] flex flex-col items-end">
-            <h2 className="text-right font-bold leading-snug">
+          <div className="lg:w-[45%] w-full flex flex-col lg:items-end items-center">
+            <h2 className="lg:text-right text-center font-bold leading-snug mt-4 lg:mt-0">
               Crafting <br />
               Unforgettable <br /> Experiences
               <br /> Through Music
             </h2>
-            <p className="text-right text-[#555555] mt-3">
-              At Book Your Musician, we’re more than just a booking platform — we’re
-              your partner in creating unforgettable experiences through the power of
-              live music. Whether you’re planning an intimate celebration, a grand
-              event, or simply searching for the perfect artist to bring your vision to
-              life, we make it effortless.
+            <p className="lg:text-right text-center text-[#555555] mt-3">
+              At Book Your Musician, we’re more than just a booking platform —
+              we’re your partner in creating unforgettable experiences through
+              the power of live music. Whether you’re planning an intimate
+              celebration, a grand event, or simply searching for the perfect
+              artist to bring your vision to life, we make it effortless.
             </p>
-            <button className="px-10 py-3 rounded-full border mt-8">
-              Learn more about us
-            </button>
+            <Button text="Learn more about us" className="mt-3" onClick={() => navigate("/")} />
+
           </div>
         </div>
 
-
-        <div className="mt-10">
+        <div className="lg:mt-10 mt-2">
           <div className="w-full container  text-center font-medium text-[#1B1B1A]">
             <h3>
               With thousands of bands already on board, We connect artists with
@@ -72,48 +129,86 @@ const index = () => {
           </div>
         </div>
 
-        <div className="mt-10">
-          <div className="grid grid-cols-3 container">
+        <div className="lg:mt-10 mt-4">
+          <div
+            className="
+      container 
+      grid grid-cols-1 
+      lg:grid-cols-12 
+      items-stretch
+    "
+          >
+            {/* LEFT TEXT */}
+            <Link
+              to="/"
+              className="lg:col-span-4 flex flex-col text-center lg:text-left"
+            >
+              <h4 className="font-bold">ARTISTS & BANDS</h4>
+              <p className="text-[#555555]">
+                Book top artists and bands for your next event — it's that
+                simple!
+              </p>
+              {/* Overlapping images below left text */}
+              <div className="flex -space-x-3 self-center lg:self-auto mt-4">
+                <img
+                  className="w-12 h-12 rounded-full object-cover z-10 relative"
+                  src={Artist1}
+                  alt="Artist 1"
+                />
 
-            {/* LEFT SECTION */}
-            <div className="flex items-center justify-between">
-              {/* Text Block */}
-              <div className="flex flex-col">
-                <span className="font-bold">ARTISTS & BANDS</span>
-                <p className="text-[#555555] text-sm">
-                  Book top artists and bands for your next event – it's that simple!
-                </p>
+                <img
+                  className="w-12 h-12 rounded-full object-cover z-30 -ml-3 relative"
+                  src={Artist2}
+                  alt="Artist 2"
+                />
+
+                <img
+                  className="w-12 h-12 rounded-full object-cover z-30 -ml-3 relative"
+                  src={Artist3}
+                  alt="Artist 3"
+                />
+
+                <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-xs font-bold text-gray-600 shadow-md z-40 -ml-3 relative border border-gray-200">
+                  100+
+                </div>
               </div>
-              {/* SVG */}
+            </Link>
+
+            {/* LEFT ICON */}
+            <div className="lg:col-span-1  hidden  sm:flex justify-center items-start mt-2 lg:mt-0">
               <Guitar />
             </div>
 
-            {/* MIDDLE DIVIDER */}
-            <div className="flex items-center justify-center">
-              <span className="text-[#555555] font-normal">------------</span>
+            {/* DIVIDER */}
+            <div className="lg:col-span-2 hidden sm:flex justify-center mt-5 h-full">
+              <span className="text-[#555555] font-normal">
+                ---------------
+              </span>
             </div>
 
-            {/* RIGHT SECTION */}
-            <div className="flex items-center justify-between gap-2">
+            {/* RIGHT ICON */}
+            <div className="lg:col-span-1  hidden  sm:flex justify-center items-start">
+              <Band />
+            </div>
 
-              <Guitar />
-              <div className="flex flex-col ">
-                <span className="font-bold">AUDIENCE&EVENT PLANNERS</span>
-                <p className="text-[#555555] text-sm text-left">
-                  Event planners and audiences, find the perfect artists and bands to make your event amazing!
+            {/* RIGHT TEXT */}
+            <Link
+              to="/"
+              className="lg:col-span-4 flex flex-col text-center lg:text-left justify-between sm:mt-0 mt-4"
+            >
+              <div>
+                <h4 className="font-bold">AUDIENCE & EVENT PLANNERS</h4>
+                <p className="text-[#555555]">
+                  Event planners and audiences, find the perfect artists and
+                  bands to make your event amazing!
                 </p>
               </div>
-
-
-            </div>
-
+            </Link>
           </div>
         </div>
-
-
       </section>
     </>
   );
 };
 
-export default index;
+export default SectionTwo;
