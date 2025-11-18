@@ -140,7 +140,7 @@ p {
   
 }
 h5{
-    font-size: 26px;
+    
     font-family: "Satoshi", sans-serif;
   }
 
@@ -166,10 +166,6 @@ li {
 
   h3 {
     font-size: 28px;
-  }
-
-   h5 {
-    font-size: 20px;
   }
 
   p,
@@ -213,7 +209,7 @@ li {
   }
 
   h5 {
-    font-size: 26px;
+    font-size: 20px;
   }
 
   p,
