@@ -11,7 +11,7 @@ const FormSection = () => {
     <section className="container mx-auto">
       
        
-        <div className="flex gap-3 items-center justify-center lg:max-w-[35%] sm:max-w-[65%] max-w-full
+        <div className="flex gap-3 items-center justify-center lg:max-w-[45%] sm:max-w-[65%] max-w-full
                        bg-[#F5F5F5] rounded-full px-3 py-2  mx-auto">
          
             <div className="w-5 h-5 bg-black rounded-full"></div>
