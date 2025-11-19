@@ -126,14 +126,37 @@ export default function HeroSection() {
             </h2>
 
             <div className="mt-6 sm:mt-8 md:mt-2 lg:mt-10">
-              <button className="group relative inline-flex items-center gap-2 px-5 py-3 sm:px-6 sm:py-3.5 md:px-8 md:py-2 lg:py-6 bg-transparent text-black font-normal rounded-full border border-black overflow-hidden transition-all duration-300 hover:bg-amber-800 hover:text-white text-sm sm:text-base">
+              <button className="group relative inline-flex items-center gap-2 px-5 py-3 
+                                sm:px-6 sm:py-3.5 md:px-8 md:py-2  bg-transparent 
+                                text-black font-normal rounded-full border border-black 
+                                overflow-hidden transition-all duration-300 hover:bg-[#990000] 
+                              hover:text-white text-sm sm:text-base
+                              slide-up-animation">
                 <span className="relative z-10 flex items-center font-semibold gap-2 sm:gap-3">
                   Get Booking
-                  <svg className="w-5 h-5 sm:w-6 sm:h-6 transition-transform group-hover:translate-x-1 sm:group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
+                   <svg
+        width="17"
+        height="16"
+        viewBox="0 0 17 16"
+        className="
+           duration-300
+          transition-transform 
+          group-hover:translate-x-1 
+          sm:group-hover:translate-x-2
+        "
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M16.0134 1.45517C16.0385 0.903459 15.6116 0.435829 15.0599 0.410692L6.06924 0.00105431C5.51753 -0.0240834 5.0499 0.40279 5.02476 0.954502C4.99963 1.50621 5.4265 1.97384 5.97821 1.99898L13.9699 2.3631L13.6058 10.3548C13.5807 10.9065 14.0075 11.3742 14.5592 11.3993C15.111 11.4244 15.5786 10.9976 15.6037 10.4458L16.0134 1.45517ZM0.674194 14.5001L1.34838 15.2386L15.6886 2.14821L15.0144 1.40966L14.3402 0.671098L4.58956e-06 13.7615L0.674194 14.5001Z"
+          className="transition-colors duration-300 group-hover:fill-white"
+          fill="black"
+        />
+      </svg>
                 </span>
-                <div className="absolute inset-0 bg-amber-700 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                <div className="absolute inset-0   hover:bg-[#990000] 
+                              hover:text-white translate-y-full group-hover:translate-y-0 
+                                transition-transform duration-300">
+                </div>
               </button>
             </div>
           </div>

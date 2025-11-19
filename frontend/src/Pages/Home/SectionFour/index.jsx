@@ -43,9 +43,10 @@ const SectionFour = () => {
             </div>
             <div className="py-2 flex  items-center mt-2">
               <div>
-                <h4 className="text-[#1B1B1A] font-bold">SOLO SINGER</h4>
-                <p className="text-[#555555] font-medium mt-2 ">
-                  Our solo singers bring emotion and elegance to any event...
+                <h4 className="text-[#1B1B1A] font-bold uppercase">solo singer</h4>
+                <p className="text-[#555555] font-medium mt-2 line-clamp-3 ">
+                   Our solo singers create unforgettable moments with soulful performances, 
+  delivering emotion, elegance...
                 </p>
               </div>
               <div className="flex items-center justify-center sm:p-6 p-2 rounded-full border border-gray-400 transition-all duration-300 group-hover:bg-[#990000] group-hover:border-transparent">

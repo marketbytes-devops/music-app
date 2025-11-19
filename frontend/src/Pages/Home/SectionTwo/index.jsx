@@ -102,13 +102,13 @@ const SectionTwo = () => {
 
           {/* RIGHT SECTION - TEXT */}
           <div className="lg:w-[45%] w-full flex flex-col lg:items-end items-center">
-            <h2 className="lg:text-right text-center font-bold leading-snug mt-4 lg:mt-0">
+            <h2 className="lg:text-right lg:!text-[38px] text-center font-bold leading-snug mt-4 lg:mt-0">
               Crafting <br />
               Unforgettable <br /> Experiences
               <br /> Through Music
             </h2>
-            <p className="lg:text-right text-center text-[#555555] mt-3">
-              At Book Your Musician, we’re more than just a booking platform —
+            <p className="lg:text-right  text-center text-[#555555] mt-3 lg:ml-8 ml-0">
+              At Book Your Musician, we’re more than just a booking platform -
               we’re your partner in creating unforgettable experiences through
               the power of live music. Whether you’re planning an intimate
               celebration, a grand event, or simply searching for the perfect
@@ -119,8 +119,8 @@ const SectionTwo = () => {
           </div>
         </div>
 
-        <div className="lg:mt-10 mt-2">
-          <div className="w-full container  text-center font-medium text-[#1B1B1A]">
+        <div className="lg:mt-12 xl:mt-24 mt-2">
+          <div className="w-full container text-center font-medium text-[#1B1B1A]">
             <h3>
               With thousands of bands already on board, We connect artists with
               paid gigs and talent seekers with exceptional performers. The
@@ -149,26 +149,31 @@ const SectionTwo = () => {
                 simple!
               </p>
               {/* Overlapping images below left text */}
-              <div className="flex -space-x-3 self-center lg:self-auto mt-4">
+              <div className="flex -space-x-3 self-center lg:self-auto mt-4 ">
                 <img
-                  className="w-12 h-12 rounded-full object-cover z-10 relative"
+                  className="w-12 h-12 rounded-full object-cover z-10 relative
+                             transition-transform duration-300 hover:scale-105"
                   src={Artist1}
                   alt="Artist 1"
                 />
 
                 <img
-                  className="w-12 h-12 rounded-full object-cover z-30 -ml-3 relative"
+                  className="w-12 h-12 rounded-full object-cover z-30 -ml-3 relative
+                             transition-transform duration-300 hover:scale-105"
                   src={Artist2}
                   alt="Artist 2"
                 />
 
                 <img
-                  className="w-12 h-12 rounded-full object-cover z-30 -ml-3 relative"
+                  className="w-12 h-12 rounded-full object-cover z-30 -ml-3 relative
+                             transition-transform duration-300 hover:scale-105"
                   src={Artist3}
                   alt="Artist 3"
                 />
 
-                <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-xs font-bold text-gray-600 shadow-md z-40 -ml-3 relative border border-gray-200">
+                <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-xs
+                               font-bold text-gray-600 shadow-md z-40 -ml-3 relative border border-gray-200
+                               transition-transform duration-300 hover:scale-105">
                   100+
                 </div>
               </div>

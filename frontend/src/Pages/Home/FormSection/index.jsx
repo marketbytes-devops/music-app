@@ -22,12 +22,13 @@ const FormSection = () => {
 
         <h2 className="text-center uppercase font-bold">LET'S TALK</h2>
       
-      <div className="">
-  
-  <img src={LetsTalk} className="w-full h-auto -mt-3" alt="Lets Talk" />
+   <div className="relative">
+  {/* Sticky background text */}
+  <img src={LetsTalk} className="w-full h-auto -mt-3 sticky top-10" alt="Lets Talk" />
+ 
 
-  {/* Form overlay */}
-  <div className="">
+  {/* FORM SCROLLS */}
+  <div className="relative z-20 md:-translate-y-14 translate-y-0">
     <ContactForm
       title="GET IN TOUCH"
       description="Reach out with inquiries about tickets, partnerships, or event details."
@@ -37,6 +38,7 @@ const FormSection = () => {
     />
   </div>
 </div>
+
 
 
     </section>
