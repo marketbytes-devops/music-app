@@ -1,9 +1,15 @@
 import React from 'react'
-
-const AboutPage = () => {
+import SectionOne from"./SectionOne"
+const About = () => {
   return (
-    <div>AboutPage</div>
+  
+        <>
+        <section className="">
+        <SectionOne />
+      </section>
+    
+    </>
   )
 }
 
-export default AboutPage
+export default About
