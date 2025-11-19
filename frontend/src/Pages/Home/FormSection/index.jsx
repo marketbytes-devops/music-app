@@ -28,7 +28,9 @@ const FormSection = () => {
  
 
   {/* FORM SCROLLS */}
-  <div className="relative z-20 md:-translate-y-14 translate-y-0">
+  <div className="relative w-full min-h-[800px]"> 
+  {/* FORM */}
+  <div className="relative z-20  ">
     <ContactForm
       title="GET IN TOUCH"
       description="Reach out with inquiries about tickets, partnerships, or event details."
@@ -37,6 +39,8 @@ const FormSection = () => {
       onSubmit={handleSubmit}
     />
   </div>
+</div>
+
 </div>
 
 

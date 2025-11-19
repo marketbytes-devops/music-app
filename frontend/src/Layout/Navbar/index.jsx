@@ -16,6 +16,7 @@ const Navbar = () => {
   }, []);
 
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false); // New state to track scroll
 
   const toggleMenu = () => setMenuOpen((prev) => !prev);
   const closeMenu = () => setMenuOpen(false);
@@ -27,6 +28,16 @@ const Navbar = () => {
       }, 100);
     }
   }, [menuOpen]);
+
+  // New useEffect to handle scroll detection
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const menuItems = [
     {
@@ -64,12 +75,16 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="w-full mx-auto bg-white shadow-inner hover:shadow-lg border-b border-gray-200 sticky top-0 z-50">
+      <nav
+        className={`w-full mx-auto bg-white ${
+          isScrolled ? "shadow-lg" : "shadow-inner"
+        } border-b border-gray-200 sticky top-0 z-50`}
+      >
         <div className="container mx-auto">
           <div className="flex justify-between items-center py-4">
-            <div className="flex items-center">
+            <Link to='/' className="flex items-center">
               <img src={NavLogo} alt="Logo" className="h-9 w-auto" />
-            </div>
+            </Link>
             <ul className="hidden lg:flex items-center space-x-8">
               {menuItems.map((menu, index) => (
                 <li key={index}>
@@ -88,12 +103,15 @@ const Navbar = () => {
             </ul>
             <div className="hidden lg:flex">
               <Link
-                to="#"
-                className="flex items-center gap-2 bg-transparent hover:bg-gray-50 text-black font-medium py-2
-     px-4  text-sm transition duration-200"
+                to="/ContactUs"
+                className="flex items-center gap-2 bg-transparent text-black font-medium py-2 px-4 text-sm transition duration-200 group"
               >
-                Contact Us
+                <span className="relative inline-block">
+                  Contact Us
+                  <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-black transform scale-x-0 origin-left transition-transform duration-200 group-hover:scale-x-100"></span>
+                </span>
                 <svg
+                  className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1"
                   width="17"
                   height="16"
                   viewBox="0 0 17 16"
@@ -150,7 +168,7 @@ const Navbar = () => {
               ))}
               <li>
                 <Link
-                  to="/contact"
+                  to="/ContactUs"
                   onClick={closeMenu}
                   className="flex items-center justify-center gap-2 bg-transparent hover:bg-gray-50
                    text-black font-medium py-2 px-4  text-sm transition duration-200"
