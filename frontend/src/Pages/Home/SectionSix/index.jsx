@@ -113,12 +113,12 @@ const SectionSix = () => {
                     {/* CARD 1: Dr. Emily Carter */}
                     <div className="bg-[#F5F5F5] rounded-[40px] p-6">
                       <div className="grid grid-cols-2 gap-6">
-                        <div className="bg-[#DEDEE0] rounded-[40px] w-full h-[400px] px-6 py-4 flex flex-col">
-                          <span className="text-[#1C1A1A] text-2xl font-bold mt-2 mb-2">Dr. Emily Carter</span>
-                          <p className="text-[#555555] font-normal leading-[22px] flex-1">
+                        <div className="bg-[#DEDEE0] rounded-[40px] w-full h-[400px] px-4 py-4  lg:py-6  flex flex-col">
+                          <span className="text-[#1C1A1A] text-2xl font-bold mt-2   mb-2">Dr. Emily Carter</span>
+                          <p className="text-[#555555] font-normal lg:leading-[18px] xl:leading-[20px]  ">
                             "The performance was nothing short of magical! The solo singer made our wedding unforgettable, and the music created the perfect atmosphere. Highly recommend!"
                           </p>
-                          <p className="text-[#1C1A1A] text-xl mt-10">Wedding Clients</p>
+                          <p className="text-[#555555]  text-xl lg:mt-12">Wedding Clients</p>
                         </div>
  
                         <div className="relative w-full h-[400px] rounded-[40px] overflow-hidden bg-black">
@@ -138,7 +138,7 @@ const SectionSix = () => {
                                 className="absolute inset-0 flex items-center justify-center bg-black/20 cursor-pointer hover:bg-black/30 transition-all"
                               >
                                 <button className="w-24 h-24 bg-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
-                                  <Play className="w-12 h-12 text-black fill-black ml-2" />
+                                  <Play className="w-12 h-24 text-black fill-black ml-2" />
                                 </button>
                               </div>
                             </>
@@ -158,12 +158,12 @@ const SectionSix = () => {
                     {/* CARD 2: Mark */}
                     <div className="bg-[#F5F5F5] rounded-[40px] p-6">
                       <div className="grid grid-cols-2 gap-6">
-                        <div className="bg-[#DEDEE0] rounded-[40px] w-full h-[400px] px-6 py-4 flex flex-col">
+                        <div className="bg-[#DEDEE0] rounded-[40px] w-full h-auto px-6 py-4 flex flex-col">
                           <h3 className="text-[#1C1A1A] text-2xl font-bold mt-2 mb-2">Mark</h3>
-                          <p className="text-[#555555] font-normal leading-[22px] flex-1">
+                          <p className="text-[#555555] font-normal lg:leading-[18px] xl:leading-[20px]  ">
                             "From start to finish, the service was impeccable. The team helped us pick the right artists, and everything went smoothly. The musicians were top-notch, and our guests had a fantastic time!"
                           </p>
-                          <p className="text-[#1C1A1A] text-xl mt-6">Special Occasion Planner</p>
+                          <p className="text-[#555555]  lg:text-lg xl:mt-12 lg:mt-6 lg:leading-[20px] ">Special Occasion Planner</p>
                         </div>
  
                         <div className="relative w-full h-[400px] rounded-[40px] overflow-hidden bg-black">
