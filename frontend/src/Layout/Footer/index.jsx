@@ -10,7 +10,7 @@ const Footer = () => {
           {/* Logo */}
           <div className="">
             <div className="text-4xl font-bold text-gray-900 tracking-tight">
-              <img src={FooterLogo} />
+              <img src={FooterLogo}/>
             </div>
           </div>
           {/* Columns */}

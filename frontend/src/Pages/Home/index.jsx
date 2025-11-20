@@ -26,13 +26,13 @@ const HomePage = () => {
        <section className="mt-12">
         <SectionFive />
       </section>
-      <section className="md:-mt-18 mt-0"> 
+      <section className="md:-mt-18 -mt-20"> 
         <SectionSix />
       </section>
       <section className="md:mt-22 mt-5">
         <SectionSeven />
       </section>
-      <section className="md:mt-22 mt-10">
+      <section className="md:mt-22 lg:mt-24 mt-8">
         <FormSection />
       </section>
 

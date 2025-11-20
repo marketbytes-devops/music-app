@@ -24,10 +24,11 @@ const SectionTwo = () => {
     // LEFT image animation
     gsap.fromTo(
       ".img-left",
-      { scale: 0.8, y: 80, opacity: 0 },
+      { x: -50, y: 80, rotation: -24, opacity: 0 },
       {
-        scale: 1.15,
+        x: 0,
         y: 0,
+        rotation: -12,
         opacity: 1,
         scrollTrigger: {
           trigger: ".img-middle",
@@ -41,10 +42,11 @@ const SectionTwo = () => {
     // RIGHT image animation
     gsap.fromTo(
       ".img-right",
-      { scale: 0.8, y: 80, opacity: 0 },
+      { x: 50, y: 80, rotation: 24, opacity: 0 },
       {
-        scale: 1.15,
+        x: 0,
         y: 0,
+        rotation: 12,
         opacity: 1,
         scrollTrigger: {
           trigger: ".img-middle",
