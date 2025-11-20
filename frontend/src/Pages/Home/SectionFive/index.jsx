@@ -13,7 +13,7 @@ const celebrities = [
   { name: 'Beyoncé', img: celeb1 },
   { name: 'Taylor Swift', img: celeb2 },
   { name: 'Justin Bieber', img: celeb3 },
-  { name: 'Celina Dion', img: celeb4 },
+  { name: 'Celina', img: celeb4 },
   { name: 'Selena Gomez', img: celeb5 },
  
 ];

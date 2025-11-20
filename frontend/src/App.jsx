@@ -4,7 +4,7 @@ import Layout from "./Layout"
 import Home from "./Pages/Home"
 import About from "./Pages/About"
 import ContactUs from "./Pages/ContactUs"
-
+import Events from"./Pages/Events"
 
 const router = createBrowserRouter([
   {
@@ -14,6 +14,7 @@ const router = createBrowserRouter([
       { index: true, element: <Home/> },
       { path: "about", element: <About /> },
       { path:"/ContactUs", element:<ContactUs/> },
+      { path:"events", element:<Events/> },
     ],
   },
   
