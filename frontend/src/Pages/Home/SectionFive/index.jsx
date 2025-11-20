@@ -11,15 +11,11 @@ import celeb5 from '../../../assets/Images/Home/celeb5.png';
 
 const celebrities = [
   { name: 'Beyoncé', img: celeb1 },
-  { name: 'Enrique Iglesias', img: celeb2 },
-  { name: 'Ariana Grande', img: celeb3 },
-  { name: 'Justin Bieber', img: celeb4 },
+  { name: 'Taylor Swift', img: celeb2 },
+  { name: 'Justin Bieber', img: celeb3 },
+  { name: 'Celina Dion', img: celeb4 },
   { name: 'Selena Gomez', img: celeb5 },
-  { name: 'Beyoncé', img: celeb1 },
-  { name: 'Enrique Iglesias', img: celeb2 },
-  { name: 'Ariana Grande', img: celeb3 },
-  { name: 'Justin Bieber', img: celeb4 },
-  { name: 'Selena Gomez', img: celeb5 },
+ 
 ];
 
 export default function Section5() {
@@ -112,17 +108,21 @@ export default function Section5() {
 
       <section className="lg:py-16 lg:px-4 bg-white overflow-hidden">
         <div className="container mx-auto max-w-7xl">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-8 ml-12  mb-10">
-           <div className="inline-flex items-center gap-4 bg-[#F5F5F5] rounded-full px-6 py-3 text-sm font-medium tracking-wider text-gray-700">
-  <div className="w-5 h-5  bg-black rounded-full "></div>
-  OUR STARS & PERFORMERS
-</div>
-            <h2 className="text-4xl md:text-5xl lg:ml-40  font-medium font-lemon text-black">
-              CELEBRITIES & MUSICIANS
-            </h2>
-          </div>
+<div className="mb-12">
+  <div className="flex flex-col items-center sm:flex-row sm:justify-start sm:items-center gap-6 lg:gap-12 w-full">
+    
 
-          {/* Desktop Carousel - Hidden on Mobile */}
+    <span className="inline-flex items-center gap-3 px-6 py-3 text-black bg-[#F5F5F5] rounded-full text-sm md:text-base font-medium tracking-wider whitespace-nowrap shrink-0">
+      <div className="w-5 h-5 bg-black rounded-full"></div>
+      OUR STARS AND PERFORMERS
+    </span>
+
+    <h2 className="text-4xl md:text-5xl font-medium font-lemon lg:ml-16 text-black text-center sm:text-left">
+      CELEBRITIES & MUSICIANS
+    </h2>
+  </div>
+</div>
+          {/* Desktop Carousel -  */}
           <div className="desktop-only-carousel">
             <Slider {...desktopSettings} className="desktop-carousel">
               {celebrities.map((celeb, index) => (

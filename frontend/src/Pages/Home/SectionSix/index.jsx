@@ -1,20 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Play } from 'lucide-react';
 import useEmblaCarousel from 'embla-carousel-react';
 import testimonial2 from '../../../assets/Images/Home/Testimonial3.jpg';
 import testimonial3 from '../../../assets/Images/Home/Testimonaial2.jpg';
- 
+
 const SectionSix = () => {
-  const [emblaRef] = useEmblaCarousel({ loop: true });
- 
-  // One state for both mobile & desktop (using index from allSlides)
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
   const [playingVideo, setPlayingVideo] = useState(null);
- 
+  const [selectedIndex, setSelectedIndex] = useState(0); // For active dot
+
   const getYouTubeId = (url) => {
     const match = url.match(/(?:youtu\.be\/|v\/|embed\/|watch\?v=)([^#&?]{11})/);
     return match?.[1];
   };
- 
+
   const testimonials = [
     {
       name: 'Dr. Emily Carter',
@@ -31,41 +30,60 @@ const SectionSix = () => {
       youtubeUrl: "https://youtu.be/M-KdPAa3gWA",
     },
   ];
- 
+
   const allSlides = [...testimonials, ...testimonials, ...testimonials, ...testimonials];
- 
+
+  // Embla: Track selected slide
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setSelectedIndex(emblaApi.selectedScrollSnap());
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    onSelect();
+    emblaApi.on('select', onSelect);
+    emblaApi.on('reInit', onSelect);
+    return () => {
+      emblaApi.off('select', onSelect);
+      emblaApi.off('reInit', onSelect);
+    };
+  }, [emblaApi, onSelect]);
+
+  // Jump to slide when dot is clicked
+  const scrollTo = (index) => {
+    emblaApi && emblaApi.scrollTo(index);
+  };
+
   return (
     <div className="w-full bg-white py-4 px-1">
       <div className="container mx-auto">
- 
+
         <div className="flex justify-center mb-4">
-       
-           <span className="inline-flex items-center gap-3 mt-29 text-black bg-[#F5F5F5]  rounded-full pl-4 pr-6 py-2 text-md font-medium tracking-wider">
-                  <div className="w-5 h-5 bg-black rounded-full"></div>
-                  OUR TESTIMONIALS
-                </span>
-         
+          <span className="inline-flex items-center gap-3 mt-29 text-black bg-[#F5F5F5] rounded-full pl-4 pr-6 py-2 text-md font-medium tracking-wider">
+            <div className="w-5 h-5 bg-black rounded-full"></div>
+            OUR TESTIMONIALS
+          </span>
         </div>
- 
+
         <h2 className="text-[#1B1B1A] text-center font-bold mb-8">
           WHAT OUR CLIENTS SAY
         </h2>
- 
+
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex">
- 
             {allSlides.map((t, i) => (
               <div key={i} className="flex-shrink-0 w-full px-4">
- 
-                {/* MOBILE – Already working */}
+
+                {/* MOBILE */}
                 <div className="lg:hidden">
-                  <div className="bg-[#F5F5F5]  rounded-3xl shadow-xl overflow-hidden">
+                  <div className="bg-[#F5F5F5] rounded-3xl shadow-xl overflow-hidden">
                     <div className="p-8 pb-6">
                       <h3 className="text-2xl font-bold text-gray-900 mb-3">{t.name}</h3>
                       <p className="text-gray-600 leading-relaxed text-base mb-4">{t.text}</p>
                       <p className="text-xl font-medium text-gray-800">{t.role}</p>
                     </div>
- 
+
                     <div className="px-8 pb-8">
                       <div className="relative rounded-2xl overflow-hidden bg-black">
                         {playingVideo === i ? (
@@ -105,22 +123,22 @@ const SectionSix = () => {
                     </div>
                   </div>
                 </div>
- 
-                {/* DESKTOP – NOW VIDEO PLAYS TOO */}
+
+                {/* DESKTOP */}
                 <div className="hidden lg:block">
                   <div className="grid grid-cols-2 gap-8">
- 
+
                     {/* CARD 1: Dr. Emily Carter */}
                     <div className="bg-[#F5F5F5] rounded-[40px] p-6">
                       <div className="grid grid-cols-2 gap-6">
-                        <div className="bg-[#DEDEE0] rounded-[40px] w-full h-[400px] px-4 py-4  lg:py-6  flex flex-col">
-                          <span className="text-[#1C1A1A] text-2xl font-bold mt-2   mb-2">Dr. Emily Carter</span>
-                          <p className="text-[#555555] font-normal lg:leading-[18px] xl:leading-[20px]  ">
+                        <div className="bg-[#DEDEE0] rounded-[40px] w-full h-[400px] px-4 py-4 lg:py-6 flex flex-col">
+                          <span className="text-[#1C1A1A] text-2xl font-bold mt-2 mb-2">Dr. Emily Carter</span>
+                          <p className="text-[#555555] font-normal lg:leading-[18px] xl:leading-[20px]">
                             "The performance was nothing short of magical! The solo singer made our wedding unforgettable, and the music created the perfect atmosphere. Highly recommend!"
                           </p>
-                          <p className="text-[#555555]  text-xl lg:mt-12">Wedding Clients</p>
+                          <p className="text-[#555555] text-xl lg:mt-12">Wedding Clients</p>
                         </div>
- 
+
                         <div className="relative w-full h-[400px] rounded-[40px] overflow-hidden bg-black">
                           {playingVideo === i ? (
                             <iframe
@@ -138,7 +156,7 @@ const SectionSix = () => {
                                 className="absolute inset-0 flex items-center justify-center bg-black/20 cursor-pointer hover:bg-black/30 transition-all"
                               >
                                 <button className="w-24 h-24 bg-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
-                                  <Play className="w-12 h-24 text-black fill-black ml-2" />
+                                  <Play className="w-12 h-12 text-black fill-black ml-2" />
                                 </button>
                               </div>
                             </>
@@ -154,20 +172,20 @@ const SectionSix = () => {
                         </div>
                       </div>
                     </div>
- 
+
                     {/* CARD 2: Mark */}
                     <div className="bg-[#F5F5F5] rounded-[40px] p-6">
                       <div className="grid grid-cols-2 gap-6">
                         <div className="bg-[#DEDEE0] rounded-[40px] w-full h-auto px-6 py-4 flex flex-col">
                           <h3 className="text-[#1C1A1A] text-2xl font-bold mt-2 mb-2">Mark</h3>
-                          <p className="text-[#555555] font-normal lg:leading-[18px] xl:leading-[20px]  ">
+                          <p className="text-[#555555] font-normal lg:leading-[18px] xl:leading-[20px]">
                             "From start to finish, the service was impeccable. The team helped us pick the right artists, and everything went smoothly. The musicians were top-notch, and our guests had a fantastic time!"
                           </p>
-                          <p className="text-[#555555]  lg:text-lg xl:mt-12 lg:mt-6 lg:leading-[20px] ">Special Occasion Planner</p>
+                          <p className="text-[#555555] lg:text-lg xl:mt-12 lg:mt-6 lg:leading-[20px]">Special Occasion Planner</p>
                         </div>
- 
+
                         <div className="relative w-full h-[400px] rounded-[40px] overflow-hidden bg-black">
-                          {playingVideo === i + 1 ? (  // +1 because Mark is next in allSlides
+                          {playingVideo === i + 1 ? (
                             <iframe
                               className="w-full h-full"
                               src={`https://www.youtube.com/embed/${getYouTubeId(testimonials[1].youtubeUrl)}?autoplay=1&rel=0&modestbranding=1`}
@@ -199,26 +217,37 @@ const SectionSix = () => {
                         </div>
                       </div>
                     </div>
- 
+
                   </div>
                 </div>
- 
+
               </div>
             ))}
- 
           </div>
         </div>
- 
-        {/* Dots */}
-        <div className="flex justify-center mt-8 gap-2">
-          <div className="w-3 h-3 rounded-full bg-gray-400"></div>
-          <div className="w-3 h-3 rounded-full bg-gray-400"></div>
-          <div className="w-3 h-3 rounded-full bg-gray-400"></div>
-          <div className="w-3 h-3 rounded-full bg-gray-400"></div>
+
+        {/* WORKING DOTS – Only this part changed */}
+        <div className="flex justify-center mt-8 gap-3">
+          {[0, 1, 2, 3].map((dotIndex) => {
+            const slideIndex = dotIndex * testimonials.length; // 0, 2, 4, 6
+            return (
+              <button
+                key={dotIndex}
+                onClick={() => scrollTo(slideIndex)}
+                className={`transition-all duration-300 rounded-full ${
+                  selectedIndex === slideIndex
+                    ? 'bg-black w-3 h-3'
+                    : 'bg-gray-400 w-3 h-3'
+                }`}
+                aria-label={`Go to slide group ${dotIndex + 1}`}
+              />
+            );
+          })}
         </div>
+
       </div>
     </div>
   );
 };
- 
+
 export default SectionSix;
