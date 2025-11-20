@@ -2,19 +2,29 @@ import { useEffect, useState } from "react";
 import { LuArrowUp } from "react-icons/lu";
 
 const GoToTop = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [showArrow, setShowArrow] = useState(false);
+  let scrollTimeout;
 
   useEffect(() => {
-    const toggleVisibility = () => {
-      if (window.scrollY > 300) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
+    const handleScroll = () => {
+      // Hide arrow while user is scrolling
+      setShowArrow(false);
+
+      // Clear timer if scrolling continues
+      if (scrollTimeout) clearTimeout(scrollTimeout);
+
+      // Wait for scroll to stop (300ms idle)
+      scrollTimeout = setTimeout(() => {
+        // Only show arrow if scrollY > 100px
+        if (window.scrollY > 100) {
+          setShowArrow(true);
+        }
+      }, 300);
     };
 
-    window.addEventListener("scroll", toggleVisibility);
-    return () => window.removeEventListener("scroll", toggleVisibility);
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollToTop = () => {
@@ -26,12 +36,13 @@ const GoToTop = () => {
 
   return (
     <>
-      {isVisible && (
+      {showArrow && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-6 right-6 bg-black text-white p-3 rounded-full shadow-lg z-50 hover:bg-gray-800 transition duration-300"
+          className="fixed bottom-8 right-6 bg-black text-white p-4 rounded-full shadow-xl
+                     hover:bg-gray-800 hover:scale-110 transition-all duration-300 z-50"
         >
-          <LuArrowUp size={22} />
+          <LuArrowUp size={26} />
         </button>
       )}
     </>
