@@ -225,10 +225,10 @@ const SectionSix = () => {
           </div>
         </div>
 
-        {/* WORKING DOTS – Only this part changed */}
+
         <div className="flex justify-center mt-8 gap-3">
           {[0, 1, 2, 3].map((dotIndex) => {
-            const slideIndex = dotIndex * testimonials.length; // 0, 2, 4, 6
+            const slideIndex = dotIndex * testimonials.length; 
             return (
               <button
                 key={dotIndex}
