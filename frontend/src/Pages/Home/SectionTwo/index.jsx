@@ -15,7 +15,6 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const SectionTwo = () => {
-
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -104,11 +103,17 @@ const SectionTwo = () => {
 
           {/* RIGHT SECTION - TEXT */}
           <div className="lg:w-[45%] w-full flex flex-col lg:items-end items-center">
-            <h2 className="lg:text-right lg:!text-[38px] text-center font-bold leading-snug mt-4 lg:mt-0">
+            
+            <h2 className="hidden lg:block lg:text-right lg:!text-[38px] text-center font-bold leading-snug mt-4 lg:mt-0">
               Crafting <br />
               Unforgettable <br /> Experiences
               <br /> Through Music
             </h2>
+
+            <h2 className="lg:hidden text-center font-bold leading-snug mt-4">
+              Crafting Unforgettable <br /> Experiences Through Music
+            </h2>
+
             <p className="lg:text-right  text-center text-[#555555] mt-3 lg:ml-8 ml-0">
               At Book Your Musician, we’re more than just a booking platform -
               we’re your partner in creating unforgettable experiences through
@@ -116,8 +121,11 @@ const SectionTwo = () => {
               celebration, a grand event, or simply searching for the perfect
               artist to bring your vision to life, we make it effortless.
             </p>
-            <Button text="Learn more about us" className="mt-3" onClick={() => navigate("/")} />
-
+            <Button
+              text="Learn more about us"
+              className="mt-3"
+              onClick={() => navigate("/")}
+            />
           </div>
         </div>
 
@@ -173,9 +181,11 @@ const SectionTwo = () => {
                   alt="Artist 3"
                 />
 
-                <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-xs
+                <div
+                  className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-xs
                                font-bold text-gray-600 shadow-md z-40 -ml-3 relative border border-gray-200
-                               transition-transform duration-300 hover:scale-105">
+                               transition-transform duration-300 hover:scale-105"
+                >
                   100+
                 </div>
               </div>
