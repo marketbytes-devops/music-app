@@ -43,7 +43,8 @@ const ContactPage = () => {
             </h1>
             {/* Partners Logo Marquee */}
             <div className="w-full overflow-hidden slide-up-animation">
-              <Form wrapperClass="bg-white max-w-[450px] w-full p-6 container" />
+              <Form wrapperClass="bg-white max-w-[450px] w-full p-6 container"
+                    description="" />
             </div>
           </div>
         </div>

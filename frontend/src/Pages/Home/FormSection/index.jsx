@@ -28,7 +28,7 @@ const FormSection = () => {
  
 
   {/* FORM SCROLLS */}
-  <div className="relative w-full min-h-[800px]"> 
+  <div className="relative w-full h-auto lg:h-[800px]"> 
   {/* FORM */}
   <div className="relative z-20  ">
     <ContactForm
