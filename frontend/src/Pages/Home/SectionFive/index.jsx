@@ -106,18 +106,21 @@ export default function Section5() {
         }
       `}</style>
 
-      <section className="lg:py-16 lg:px-4 bg-white overflow-hidden">
+      <section className="lg:py-16 lg:px-4  bg-white overflow-hidden">
         <div className="container mx-auto max-w-7xl">
-<div className="mb-12">
-  <div className="flex flex-col items-center sm:flex-row sm:justify-start sm:items-center gap-6 lg:gap-12 w-full">
+<div className="md:mb-12 mb-5">
+  <div className="flex flex-col items-center sm:flex-row sm:justify-start sm:items-center gap-4
+              lg:gap-12 w-full">
     
 
-    <span className="inline-flex items-center gap-3 px-6 py-3 text-black bg-[#F5F5F5] rounded-full text-sm md:text-base font-medium tracking-wider whitespace-nowrap shrink-0">
+    <span className="inline-flex items-center gap-3 px-6 py-3 text-black bg-[#F5F5F5] rounded-full
+                  text-sm md:text-base font-medium tracking-wider whitespace-nowrap shrink-0">
       <div className="w-5 h-5 bg-black rounded-full"></div>
       OUR STARS AND PERFORMERS
     </span>
 
-    <h2 className="text-4xl md:text-5xl font-medium font-lemon lg:ml-16 text-black text-center sm:text-left">
+    <h2 className=" font-medium font-lemon lg:ml-16 text-black text-center 
+                  sm:text-left">
       CELEBRITIES & MUSICIANS
     </h2>
   </div>
@@ -143,15 +146,15 @@ export default function Section5() {
           </div>
 
           {/* Mobile-Only Simple Slider */}
-          <div className="mobile-only-slider block sm:hidden">
+          <div className="mobile-only-slider block sm:hidden px-0">
             <Slider {...mobileSettings}>
               {celebrities.slice(0, 5).map((celeb, index) => ( 
-                <div key={index} className="px-4">
+                <div key={index} className="px-1">
                   <div className="text-center">
                     <img
                       src={celeb.img}
                       alt={celeb.name}
-                      className="w-72 h-96 mx-auto object-cover rounded-3xl "
+                      className="w-full h-auto mx-auto object-cover rounded-3xl "
                     />
                     <p className="mt-6 text-2xl font-bold text-gray-900">
                       {celeb.name}
