@@ -70,7 +70,7 @@ export default function SectionThree() {
                   >
                     {/* Hover Image */}
                     <div
-                      className={`absolute left-1/2 -top-40 -translate-x-1/2 pointer-events-none z-50 transition-all duration-500 ease-out ${
+                      className={`absolute left-1/2 -top-40 -translate-x-1/2 pointer-events-none z-20 transition-all duration-500 ease-out ${
                         hoveredIndex === index ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
                       }`}
                       style={{
