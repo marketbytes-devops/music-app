@@ -27,7 +27,7 @@ export default function SectionThree() {
   };
 
   return (
-    <section className="lg:py-20 py-5 px-2 text-white">
+    <section className="lg:py-20 py-5 px-0 text-white">
       <div className="container mx-auto">
         <div className="mx-auto bg-black rounded-3xl  p-0 sm:p-2 lg:p-6 border
                        border-gray-800 overflow-visible">

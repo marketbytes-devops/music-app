@@ -110,11 +110,11 @@ const SectionTwo = () => {
               <br /> Through Music
             </h2>
 
-            <h2 className="lg:hidden text-center font-bold leading-snug mt-4">
+            <h2 className="lg:hidden text-center font-bold leading-snug mt-6">
               Crafting Unforgettable <br /> Experiences Through Music
             </h2>
 
-            <p className="lg:text-right  text-center text-[#555555] mt-3 lg:ml-8 ml-0">
+            <p className="lg:text-right  text-center text-[#555555] mt-4 lg:ml-8 ml-0">
               At Book Your Musician, we’re more than just a booking platform -
               we’re your partner in creating unforgettable experiences through
               the power of live music. Whether you’re planning an intimate
@@ -123,13 +123,13 @@ const SectionTwo = () => {
             </p>
             <Button
               text="Learn more about us"
-              className="mt-3"
+              className="mt-4"
               onClick={() => navigate("/")}
             />
           </div>
         </div>
 
-        <div className="lg:mt-12 xl:mt-24 mt-2">
+        <div className="lg:mt-12 xl:mt-24 mt-4">
           <div className="w-full container text-center font-medium text-[#1B1B1A]">
             <h3>
               With thousands of bands already on board, We connect artists with

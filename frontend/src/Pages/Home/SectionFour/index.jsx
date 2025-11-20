@@ -147,7 +147,7 @@ const SectionFour = () => {
         >
           {/* CARD 1 */}
           <Link to='/'>
-            <div className="overflow-hidden flex flex-col text-left group px-4">
+            <div className="overflow-hidden flex flex-col text-left group px-2">
               <div className="w-full h-[260px] overflow-hidden">
                 <img src={ServiceImg1} className="w-full h-full object-cover" />
               </div>
@@ -167,7 +167,7 @@ const SectionFour = () => {
 
           {/* CARD 2 */}
           <Link to='/'>
-            <div className="overflow-hidden flex flex-col text-left group px-4">
+            <div className="overflow-hidden flex flex-col text-left group px-2">
               <div className="w-full h-[260px] overflow-hidden">
                 <img src={ServiceImg2} className="w-full h-full object-cover" />
               </div>
@@ -187,7 +187,7 @@ const SectionFour = () => {
 
           {/* CARD 3 */}
           <Link to='/'>
-            <div className="overflow-hidden flex flex-col text-left group px-4">
+            <div className="overflow-hidden flex flex-col text-left group px-2">
               <div className="w-full h-[260px] overflow-hidden">
                 <img src={ServiceImg3} className="w-full h-full object-cover" />
               </div>
@@ -207,7 +207,7 @@ const SectionFour = () => {
 
           {/* CARD 4 */}
           <Link to='/'>
-            <div className="overflow-hidden flex flex-col text-left group px-4">
+            <div className="overflow-hidden flex flex-col text-left group px-2">
               <div className="w-full h-[260px] overflow-hidden">
                 <img src={ServiceImg4} className="w-full h-full object-cover" />
               </div>
