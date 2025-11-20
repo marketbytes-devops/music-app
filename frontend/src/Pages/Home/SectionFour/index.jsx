@@ -143,6 +143,8 @@ const SectionFour = () => {
           slidesToShow={1}
           slidesToScroll={1}
           arrows={false}
+          centerPadding="10px"        
+          className="-mx-4"
           
         >
           {/* CARD 1 */}
