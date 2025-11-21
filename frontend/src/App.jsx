@@ -5,6 +5,7 @@ import Home from "./Pages/Home"
 import About from "./Pages/About"
 import ContactUs from "./Pages/ContactUs"
 import Events from"./Pages/Events"
+import SectionTwo from "./Pages/Events"
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
       { path: "about", element: <About /> },
       { path:"/ContactUs", element:<ContactUs/> },
       { path:"events", element:<Events/> },
+       { path:"/events/card1", element:<SectionTwo/>}
     ],
   },
   

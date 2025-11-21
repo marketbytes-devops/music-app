@@ -126,14 +126,16 @@ const ContactForm = ({
         )}
 
         {fields.includes("subject") && (
-          <input
-            type="text"
-            name="subject"
-            placeholder="Subject"
-            value={formData.subject}
-            onChange={handleChange}
-            className="border border-gray-300 rounded-full p-3 w-full focus:outline-none focus:ring-2 focus:ring-[#990000]"
-          />
+          <div className="flex flex-col">
+            <input
+              type="text"
+              name="subject"
+              placeholder="Subject"
+              value={formData.subject}
+              onChange={handleChange}
+              className="border border-gray-300 rounded-full p-3 w-full focus:outline-none focus:ring-2 focus:ring-[#990000]"
+            />
+          </div>
         )}
 
         {fields.includes("message") && (
